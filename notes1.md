@@ -360,4 +360,6 @@ Minnow's position is called the state of an objects
 
 Minnow and Shark swim differently, this is called behavior
 
+link: https://blog.codinghorror.com/curlys-law-do-one-thing/
+
 
