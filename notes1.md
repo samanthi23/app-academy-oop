@@ -362,4 +362,100 @@ Minnow and Shark swim differently, this is called behavior
 
 link: https://blog.codinghorror.com/curlys-law-do-one-thing/
 
+a large class is > 125 lines of code
 
+# inheritance and DRY
+
+```
+class Minnow
+  def eat
+    puts "eat eat eat"
+  end
+end
+
+class Shark
+  def eat
+    puts "eat eat eat"
+  end
+end
+```
+
+```
+class Fish
+  def eat
+    puts "eat eat eat"
+  end
+end
+
+class Minnow < Fish
+end
+
+class Shark < Fish
+end
+```
+
+```
+class Employee
+  def wage
+    20_000
+  end
+end
+
+class Manager < Employee
+  def wage
+    50_000
+  end
+end
+
+class CEO < Manager
+  def wage
+    1_000_000
+  end
+end
+
+# calculate the total salary of many employees
+def total_salary(employees)
+  total = 0
+  employees.each do |employee|
+    # Don't know/care what kind of `Employee` (regular, Manager,
+    # or CEO) this is. We can treat them all the same.
+    total += employee.wage
+  end
+end
+```
+
+# information hiding 
+## encapsulation
+
+
+methods private
+
+can only access those methods from within the class
+
+```
+class Airplane
+  def fly
+    start_engine
+    ...
+  end
+
+  private
+  def start_engine
+    ...
+  end
+end
+```
+
+instance variables are always 'private'
+
+public getter/setter methods 
+
+attr_accessor
+
+# UML
+
+In UML, classes can be related to each other in several different ways, including parent-child and association (a "has a" relationship). Piece is the parent of Pawn, for example, while Game is associated with Board because Game has a (i.e. requires) Board.
+
+A class is usually drawn in UML with three components: a name, a set of attributes (instance variables), and a set of methods. The attributes and methods are marked as being public (+), private(-), or protected (#), and class methods are underlined.
+
+link: https://assets.aaonline.io/fullstack/ruby/assets/Chess_Diagram.png
