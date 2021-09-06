@@ -459,3 +459,44 @@ In UML, classes can be related to each other in several different ways, includin
 A class is usually drawn in UML with three components: a name, a set of attributes (instance variables), and a set of methods. The attributes and methods are marked as being public (+), private(-), or protected (#), and class methods are underlined.
 
 link: https://assets.aaonline.io/fullstack/ruby/assets/Chess_Diagram.png
+
+# Modules
+
+```
+module Greetable
+  def greet
+    "Hello, my name is #{self.name}"
+  end
+end
+
+class Human
+  include Greetable
+  
+  def initialize(name)
+    @name = name
+  end
+  
+  def name
+    @name
+  end
+end
+
+class Robot
+  include Greetable
+  
+  def name
+    "Robot Model #2000"
+  end
+end
+```
+
+makes the methods defined in module and make them available to instances of Robot and Human
+
+## Enumerable
+
+each
+
+Array, Hash
+
+## include vs extend
+
