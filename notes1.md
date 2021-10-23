@@ -104,7 +104,7 @@ end
 Liger.new.make_n_noises(3) # => Roar Roar Roar Growl Growl Growl
 ```
 
-if superis called without any arguments the arguments passed to the method will be implicitly passed to 
+if super is called without any arguments the arguments passed to the method will be implicitly passed to 
 
 super(num)
 
