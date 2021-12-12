@@ -22,7 +22,7 @@ def reaction(maybe_fruit)
   if FRUITS.include? maybe_fruit
     puts "OMG, thanks so much for the #{maybe_fruit}!"
   elsif maybe_fruit == 'coffee'
-    raise NotAFruitError
+    raise CoffeeError
   else
     raise NotAFruitError
   end
