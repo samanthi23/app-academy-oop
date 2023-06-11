@@ -17,3 +17,12 @@ reject means get rid of these
 &:empty? if element is empty discard those [row][col]
 
 leaving the cells with the chess pieces on them
+
+# piece.class.new 
+
+piece color
+
+new_board
+
+piece.pos
+
